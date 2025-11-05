@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jeux & API — Portfolio RYT</title>
+  <meta name="description" content="Découvrez mes mini-jeux interactifs : Memory, Pendu et Juste Prix." />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      background: linear-gradient(135deg, rgba(11,107,90,0.95) 0%, rgba(15,23,42,0.85) 100%);
+      color: #fff;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 3rem 1rem 2rem;
+      width: 100%;
+    }
+
+    .ticker-marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      display: block;
+      font-weight: 500;
+      padding: 0.5cm 0;
+    }
+
+    .ticker-marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 10s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark nav-opaque fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html">RYT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html#projects">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER + CARTES -->
+  <header class="hero">
+    <div class="container text-center text-white">
+      <h1 class="display-5 fw-bold">Jeux & Expérimentations API</h1>
+      <p class="lead mt-3 mb-4 ticker-marquee">
+        <span>Mini-jeux • Développement JavaScript • APIs ludiques •</span>
+      </p>
+      <a href="../index.html#projects" class="btn btn-outline-light btn-lg mb-4">Retour au Portfolio</a>
+
+      <!-- CARTES -->
+      <div class="row g-4 justify-content-center mt-4">
+        <!-- Memory -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="../images/memory.jpg" class="card-img-top" alt="Jeu Memory">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Jeu du Memory</h5>
+              <p class="card-text">Retourne toutes les cartes et retrouve les paires le plus rapidement possible pour tester ta mémoire !</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-success btn-sm">Jouer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Le Pendu -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="../images/pendu.jpg" class="card-img-top" alt="Le Pendu">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Le Pendu</h5>
+              <p class="card-text">Devine le mot mystère avant que le pendu ne soit complet et teste ton vocabulaire et ta logique !</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-success btn-sm">Jouer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Le Juste Prix -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="../images/justeprix.jpg" class="card-img-top" alt="Le Juste Prix">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Le Juste Prix</h5>
+              <p class="card-text">Devine le prix exact en un minimum d’essais et améliore ta rapidité et ton intuition !</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-success btn-sm">Jouer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exemple carte supplémentaire 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="../images/salon.jpg" class="card-img-top" alt="Salon de coiffure">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Salon de Coiffure</h5>
+              <p class="card-text">Découvrez le site vitrine interactif d’un salon de coiffure avec réservation en ligne et galerie dynamique.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-success btn-sm">Voir le site</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exemple carte supplémentaire 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="../images/vehicule.jpg" class="card-img-top" alt="Site Vente Véhicules">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Vente de Véhicules</h5>
+              <p class="card-text">Explorez un site de vente de véhicules moderne avec catalogue, filtres et formulaire de contact intégré.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-success btn-sm">Voir le site</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exemple carte supplémentaire 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="../images/api.jpg" class="card-img-top" alt="Expérimentations API">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Expérimentations API</h5>
+              <p class="card-text">Mini-projets utilisant des APIs externes pour enrichir l’expérience utilisateur de façon ludique et interactive.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-success btn-sm">Voir le projet</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-3 bg-dark text-white mt-auto">
+    <div class="container">
+      <small>© <span id="year"></span> RYT — Création & optimisation web</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

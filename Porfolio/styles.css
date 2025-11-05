@@ -1,0 +1,139 @@
+:root{
+  --grad-1: #0f172a;
+  --grad-2: #0b6b5a;
+  --accent: #66bb6a;
+}
+
+body{
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#0f172a;
+  background: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.nav-opaque {
+  background: rgba(15,23,42,0.9);
+  padding: 1rem 0;
+}
+.navbar-brand { letter-spacing: .4px; }
+
+/* HERO */
+.hero{
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, rgba(11,107,90,0.95) 0%, rgba(15,23,42,0.85) 60%);
+  background-blend-mode: multiply;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: linear-gradient(45deg, rgba(255,255,255,0.02) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.02) 75%, transparent 75%, transparent);
+  background-size: 16px 16px;
+  pointer-events:none;
+  mix-blend-mode: overlay;
+}
+
+/* Remonter le titre juste de 2cm */
+.hero h1{
+  font-size: clamp(1.6rem, 3.6vw, 2.6rem);
+  line-height:1.05;
+  margin-bottom: 0.5rem;
+  transform: translateY(-2cm); 
+}
+
+.hero p.lead{
+  opacity: .95;
+  margin-bottom: .8rem;
+}
+
+/* Ticker fluide */
+.ticker-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  font-weight: 500;
+  padding: 0.5cm 0;
+}
+
+.ticker-marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.btn-cta{
+  background: var(--accent);
+  border: none;
+  color: white;
+  box-shadow: 0 8px 24px rgba(6,95,58,0.18);
+}
+.btn-cta:hover{
+  transform: translateY(-2px);
+  background: #57a85a;
+}
+
+/* Sections */
+section{
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+/* Cards projets */
+.card img { height: 200px; object-fit: cover; }
+
+/* Cartes services : bordure verte et hover */
+#services .service-card {
+  border: 2px solid var(--accent) !important;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#services .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(6,95,58,0.3);
+}
+
+footer { font-size: .9rem; }
+
+/* Responsive */
+@media (max-width: 768px){
+  .hero { padding: 5rem 1rem; }
+  .hero h1 { font-size: 1.6rem; }
+}
+
+/* --- Mise en page des cartes de la page jeux/api --- */
+.jeux-section {
+  padding: 4rem 1rem;
+  min-height: 100vh; /* Pour couvrir toute la hauteur visible */
+}
+
+.jeux-section .card {
+  margin: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.jeux-section .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.jeux-section .card img {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--accent);
+  margin: 5px;
+  
+}

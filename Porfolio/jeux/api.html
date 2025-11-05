@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeux & API — Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Styles globaux -->
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body style="background: linear-gradient(135deg, rgba(11,107,90,0.95) 0%, rgba(15,23,42,0.85) 60%); color: white;">
+
+  <!-- Navbar simple -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html">← Retour à l’accueil</a>
+    </div>
+  </nav>
+
+  <!-- Section principale -->
+  <section class="jeux-section text-center text-white" style="padding-top: 7rem;">
+    <div class="container">
+      <h1 class="mb-5 display-6 fw-bold">Mini-jeux & Expérimentations API</h1>
+      
+      <div class="row justify-content-center">
+        <!-- Memory -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-white shadow-lg">
+        <img src="images/memory-logo.png" alt="Memory Game" class="img-fluid mx-auto d-block" style="max-width: 400px;">
+            <div class="card-body">
+              <h5 class="card-title">Jeu du Memory</h5>
+              <p class="card-text">Retrouve toutes les paires le plus vite possible et défie ton cerveau !</p>
+              <a href="https://jeumemory.netlify.app/" class="btn btn-cta btn-sm">Jouer</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Le Pendu -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-white shadow-lg">
+            <img src="images/jeuxpendu.png" alt="Le Pendu" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Le Pendu</h5>
+              <p class="card-text">Devine le mot avant que le pendu ne soit complet ! Teste ton vocabulaire et ta logique.</p>
+              <a href="https://jeuxlependu.netlify.app/" class="btn btn-cta btn-sm">Jouer</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Le Juste Prix -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-white shadow-lg">
+            <img src="images/justeprix.jpg" alt="Le Juste Prix" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Le Juste Prix</h5>
+              <p class="card-text">Trouve le bon prix en un minimum d’essais et deviens le maître du calcul rapide !</p>
+              <a href="https://lejustprix.netlify.app/" class="btn btn-cta btn-sm">Jouer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-dark text-white mt-auto">
+    <div class="container">
+      <small>© <span id="year"></span> Portfolio — Jeux & API</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
